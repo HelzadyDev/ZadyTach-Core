@@ -9,10 +9,11 @@
         "ignoreDeprecations": "6.0",
 
 		// Language and environment options
-		"lib": ["ESNext"],
+		"lib": ["ESNext", "DOM"],
 		"target": "ESNext",
 		"module": "NodeNext",
 		"moduleResolution": "NodeNext",
+		"types": ["node"],
 		
 		// Linting options
 		"noUnusedLocals": true,
@@ -27,7 +28,7 @@
 		// Path mapping Options
 		"baseUrl": "./src",
 		"paths": {
-			
+			"@functions": ["./functions/index.ts"]
 		}
 	},
 	
