@@ -76,11 +76,13 @@ function createDate(date: Date | string | number): any {
         }
         case "years":
           return Math.abs(_date.getFullYear() - other.getFullYear());
+        default:
+          return msDiff;
       }
     },
     clone() {
       return createDate(_date.getTime());
-    }
+    },
   });
 }
 

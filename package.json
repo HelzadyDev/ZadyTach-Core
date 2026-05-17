@@ -2,12 +2,13 @@
   "name": "@blackmagic/core",
   "version": "1.0.0",
   "description": "Uma coleção de funções utilitárias simples e leves para tarefas comuns em projetos.",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "publishConfig": {
         "access": "public"
     },
   "scripts": {
-    "build": " tsx"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
