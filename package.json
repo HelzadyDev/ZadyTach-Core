@@ -5,8 +5,11 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "publishConfig": {
-        "access": "public"
-    },
+    "access": "public"
+  },
+  "files": [
+    "build"
+  ],
   "scripts": {
     "build": "tsc"
   },
@@ -15,7 +18,7 @@
     "url": "git+https://github.com/HelzadyDev/BlackMagic-Core.git"
   },
   "keywords": [
-     "discord",
+    "discord",
     "discordjs",
     "typescript"
   ],
@@ -35,6 +38,8 @@
     "typescript": "^6.0.3"
   },
   "paths": {
-    "@functions": ["./functions/index.js"]
+    "@functions": [
+      "./build/functions/index.js"
+    ]
   }
 }
