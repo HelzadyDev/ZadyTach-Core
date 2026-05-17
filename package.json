@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/HelzadyDev/BlackMagic-Core.git"
   },
-  "keywords": [],
+  "keywords": [
+     "discord",
+    "discordjs",
+    "typescript"
+  ],
   "author": {
     "url": "https://github.com/HelzadyDev",
     "name": "HelzadyDev"
