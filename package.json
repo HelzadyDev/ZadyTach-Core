@@ -1,6 +1,6 @@
 {
   "name": "@zadytach/core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Uma coleção de funções utilitárias simples e leves para tarefas comuns em projetos.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
