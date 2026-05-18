@@ -1,7 +1,7 @@
 # BlackMagic-Core
 
 [![NPM Version](https://img.shields.io/npm/v/%40zadytach%2Fcore)](https://www.npmjs.com/package/@zadytach/core)
-[![License: ISC](https://img.shields.io/badge/License-ISC-yellow.svg)](https://opensource.org/licenses/ISC)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Uma coleção de funções utilitárias simples, leves e eficientes para tarefas comuns em projetos JavaScript/TypeScript.
 
@@ -157,7 +157,7 @@ Contribuições são bem-vindas! Se encontrou um bug ou tem sugestões, abra uma
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a licença ISC - veja o arquivo [LICENSE](LICENSE) para detalhes.
+Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
 
 ## 👨‍💻 Autor
 
