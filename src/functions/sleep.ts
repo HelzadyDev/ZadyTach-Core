@@ -1,5 +1,5 @@
 import { setTimeout } from 'node:timers/promises';
-import { withProperties } from '@functions';
+import { withProperties } from '#functions';
 
 async function baseSleep(time: number, value: any) {
   await setTimeout(time);

@@ -1,4 +1,4 @@
-import { isDefined } from '@functions';
+import { isDefined } from '#functions';
 
 function joinBuilder(separator: string, ...text: (string | undefined | null)[]) {
   return text.flat(Infinity).filter(isDefined).filter((bol): bol is string => typeof bol === "string").join(separator);

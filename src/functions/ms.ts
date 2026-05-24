@@ -1,4 +1,4 @@
-import { withProperties } from '@functions';
+import { withProperties } from '#functions';
 
 const timeUnits = Object.freeze({
   seconds: (value: number) => value * 1e3,

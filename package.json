@@ -11,7 +11,9 @@
     "build"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run check-build",
+    "check-build": "node scripts/check-build.js"
   },
   "repository": {
     "type": "git",
@@ -38,7 +40,7 @@
     "typescript": "^6.0.3"
   },
   "paths": {
-    "@functions": [
+    "#functions": [
       "./build/functions/index.js"
     ]
   }
