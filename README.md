@@ -1,9 +1,10 @@
-# BlackMagic-Core
+# ZadyTach Core
 
 [![NPM Version](https://img.shields.io/npm/v/%40zadytach%2Fcore)](https://www.npmjs.com/package/@zadytach/core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-ready-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
-Uma coleção de funções utilitárias simples, leves e eficientes para tarefas comuns em projetos JavaScript/TypeScript.
+Biblioteca utilitária para JavaScript/TypeScript com funções pequenas, objetivas e sem dependências pesadas.
 
 ## 📦 Instalação
 
@@ -11,21 +12,19 @@ Uma coleção de funções utilitárias simples, leves e eficientes para tarefas
 npm install @zadytach/core
 ```
 
-ou com yarn:
+Também disponível com:
 
 ```bash
 yarn add @zadytach/core
 ```
 
-ou com pnpm:
-
 ```bash
 pnpm add @zadytach/core
 ```
 
-## 🚀 Uso Rápido
+## 🚀 Uso rápido
 
-```typescript
+```ts
 import {
   isEmail,
   isUrl,
@@ -36,87 +35,101 @@ import {
   msToTime,
 } from "@zadytach/core";
 
-// Validação
 isEmail("test@example.com"); // true
 isUrl("https://example.com"); // true
 isDefined(null); // false
 
-// String
 equalsIgnoreCase("Hello", "hello"); // true
 
-// Tempo
-await sleep(1000); // aguarda 1 segundo
+await sleep(1000); // espera 1 segundo
 msToTime(3661000); // "01h 01m 01s"
 
-// Formatação
 formatBytes(1024); // "1 KB"
 ```
 
-## 📚 Funções Disponíveis
+## 📚 Módulos e funções
 
-### ✅ Validação (`validation`)
+### ✅ `validation`
 
-- **`isEmail(email: string): boolean`** - Valida endereço de email
-- **`isUrl(url: string): boolean`** - Valida URL
-- **`isNumeric(text: string): boolean`** - Valida se é numérico
-- **`isDefined(value: any): boolean`** - Verifica se valor está definido
-- **`isPromise(value: any): boolean`** - Verifica se é uma Promise
+- `isEmail(email: string): boolean`
+- `isUrl(url: string): boolean`
+- `isNumeric(text: string): boolean`
+- `isDefined(value: any): boolean`
+- `isPromise(value: any): boolean`
 
-### 🔍 Verificação (`check`)
+### 🔎 `check`
 
-- **`equalsIgnoreCase(text1: string, text2: string): boolean`** - Compara strings ignorando maiúsculas
-- **`includesIgnoreCase(text: string, query: string): boolean`** - Busca em string ignorando maiúsculas
+- `equalsIgnoreCase(text1: string, text2: string): boolean`
+- `includesIgnoreCase(text: string, query: string): boolean`
 
-### ⏱️ Tempo (`timers` & `sleep`)
+### ⏱️ `sleep` + `timers`
 
-- **`sleep(ms: number): Promise<void>`** - Aguarda tempo especificado
-- **`setIntervalAsync(callback, delay, immediate?): Promise<void>`** - Intervalo assíncrono
-- **`setTimeoutAsync(callback, delay): Promise<void>`** - Timeout assíncrono
+- `sleep(ms: number): Promise<void>`
+- `setIntervalAsync(callback, delay, immediate?): Promise<void>`
+- `setTimeoutAsync(callback, delay): Promise<void>`
 
-### 🔄 Conversão (`convert` & `ms`)
+### 🔁 `convert` + `ms`
 
-- **`msToTime(ms: number): string`** - Converte milissegundos para formato legível (ex: "01h 30m 45s")
-- **`timeToMs(time: string): number`** - Converte formato de tempo para milissegundos
+- `msToTime(ms: number): string`
+- `timeToMs(time: string): number`
 
-### 📅 Data (`date`)
+### 📅 `date`
 
-- Funções para manipulação e formatação de datas
+Funções utilitárias para data e horário.
 
-### 🧮 Matemática (`math`)
+### 🧮 `math`
 
-- Funções utilitárias de matemática
+Funções de matemática para uso geral.
 
-### 📏 Formatação (`format`)
+### 📏 `format`
 
-- **`formatBytes(bytes: number): string`** - Formata bytes para unidade legível (KB, MB, GB, etc)
-- Outras funções de formatação
+- `formatBytes(bytes: number): string`
+- Outras funções de formatação.
 
-### 🛠️ Utilitários (`with`)
+### 🛠️ `with`
 
-- Funções utilitárias gerais
+Helpers utilitários para cenários comuns.
 
-## 📂 Estrutura do Projeto
+## 🧩 Exemplo completo
 
+```ts
+import { isEmail, sleep, formatBytes } from "@zadytach/core";
+
+async function run() {
+  if (isEmail("user@example.com")) {
+    console.log("Email válido!");
+  }
+
+  await sleep(2000);
+  console.log("2 segundos se passaram");
+
+  const fileSize = formatBytes(5242880);
+  console.log(`Tamanho: ${fileSize}`); // "5 MB"
+}
+
+run();
 ```
+
+## 🏗️ Estrutura do projeto
+
+```txt
 src/
 ├── index.ts
 └── functions/
-    ├── check.ts          # Verificações de string
-    ├── convert.ts        # Funções de conversão
-    ├── date.ts           # Manipulação de datas
-    ├── format.ts         # Formatação de dados
-    ├── math.ts           # Funções matemáticas
-    ├── ms.ts             # Conversão de tempo
-    ├── sleep.ts          # Delay assíncrono
-    ├── timers.ts         # Timers assíncronos
-    ├── validation.ts     # Validações
-    ├── with.ts           # Utilitários gerais
-    └── index.ts          # Exportações
+    ├── check.ts
+    ├── convert.ts
+    ├── date.ts
+    ├── format.ts
+    ├── math.ts
+    ├── ms.ts
+    ├── sleep.ts
+    ├── timers.ts
+    ├── validation.ts
+    ├── with.ts
+    └── index.ts
 ```
 
 ## 🔧 Desenvolvimento
-
-### Build
 
 ```bash
 npm run build
@@ -124,40 +137,13 @@ npm run build
 
 Compila TypeScript para JavaScript em `build/`.
 
-### Scripts Disponíveis
-
-- `npm run build` - Compila o projeto
-
-## 📝 Exemplo Completo
-
-```typescript
-import { isEmail, isDefined, sleep, formatBytes } from "@zadytach/core";
-
-async function exampleFunction() {
-  // Validar email
-  if (isEmail("user@example.com")) {
-    console.log("Email válido!");
-  }
-
-  // Aguardar 2 segundos
-  await sleep(2000);
-  console.log("2 segundos se passaram");
-
-  // Formatar tamanho de arquivo
-  const fileSize = formatBytes(5242880);
-  console.log(`Tamanho: ${fileSize}`); // "Tamanho: 5 MB"
-}
-
-exampleFunction();
-```
-
 ## 🤝 Contribuição
 
-Contribuições são bem-vindas! Se encontrou um bug ou tem sugestões, abra uma [issue](https://github.com/HelzadyDev/BlackMagic-Core/issues).
+Contribuições são bem-vindas! Se você encontrou um bug ou tem sugestões, abra uma [issue](https://github.com/HelzadyDev/BlackMagic-Core/issues).
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+Distribuído sob licença MIT. Veja [LICENSE](./LICENSE).
 
 ## 👨‍💻 Autor
 
